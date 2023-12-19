@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoThumbsUpOutline } from "react-icons/io5";
+import useTitle from '../../hooks/useTitle';
 
 const Chef = ({ recipe }) => {
     const { id, chef_name, chef_picture, years_of_experience, num_of_recipes, likes } = recipe
+    useTitle('Chef Details')
     return (
         <div className=' border p-3'>
             <div className='overflow-hidden'>

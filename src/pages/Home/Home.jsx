@@ -5,8 +5,9 @@ import Chef from '../chef/Chef';
 import banner1 from '../../assets/banner.avif'
 import { useNavigation } from 'react-router-dom';
 import Loading from '../shared/Loading';
+import useTitle from '../../hooks/useTitle';
 const Home = () => {
-
+    useTitle('Home');
     const [categories, setCategories] = useState([])
     const [recipes, setRecipes] = useState([])
     const navigation = useNavigation()

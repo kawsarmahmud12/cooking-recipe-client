@@ -57,6 +57,7 @@ const Banner = () => {
                 </div>
             </div>
         </LazyLoad>
+
     );
 };
 

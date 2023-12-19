@@ -3,6 +3,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FaGithub, FaGoogle } from 'react-icons/fa6';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
@@ -10,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     console.log(location);
+    useTitle('Login');
     const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event => {

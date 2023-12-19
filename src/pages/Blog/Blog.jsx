@@ -4,8 +4,10 @@ import { useNavigation } from 'react-router-dom';
 import Loading from '../shared/Loading';
 import Pdf from "react-to-pdf";
 import toast from 'react-hot-toast';
+import useTitle from '../../hooks/useTitle';
 
 const Blog = () => {
+    useTitle("Blog")
     const navigation = useNavigation();
     if (navigation.state === 'loading') {
         return (

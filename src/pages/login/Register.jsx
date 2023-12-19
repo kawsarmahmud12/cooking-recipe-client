@@ -3,11 +3,12 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FaGithub, FaGoogle } from 'react-icons/fa6';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
     const { createUser, updateUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const [error, setError] = useState('');
-
+     useTitle('Register')
     const handleRegister = event => {
         setError('');
         event.preventDefault();
