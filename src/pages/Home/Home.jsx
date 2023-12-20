@@ -18,14 +18,14 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch('https://food-recipe-server-6pb5z1dsl-kawsarmahmud12.vercel.app/categories')
+        fetch('https://nice-pear-goldfish-cap.cyclic.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch(error => console.log(error))
     }, [])
 
     useEffect(() => {
-        fetch('https://food-recipe-server-6pb5z1dsl-kawsarmahmud12.vercel.app/chef')
+        fetch('https://nice-pear-goldfish-cap.cyclic.app/chef')
             .then(res => res.json())
             .then(data => setRecipes(data))
             .catch(error => console.log(error))
