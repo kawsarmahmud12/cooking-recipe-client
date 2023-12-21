@@ -11,21 +11,23 @@ const Home = () => {
     const [categories, setCategories] = useState([])
     const [recipes, setRecipes] = useState([])
     const navigation = useNavigation()
-    if(navigation.state === 'loading') {
+    if(navigation.state === 'loading'){
         return (
              <Loading></Loading>
         )
     }
 
+    //
+
     useEffect(() => {
-        fetch('https://nice-pear-goldfish-cap.cyclic.app/categories')
+        fetch('https://food-recipe-server-ruby.vercel.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch(error => console.log(error))
     }, [])
 
     useEffect(() => {
-        fetch('https://nice-pear-goldfish-cap.cyclic.app/chef')
+        fetch('https://food-recipe-server-ruby.vercel.app/chef')
             .then(res => res.json())
             .then(data => setRecipes(data))
             .catch(error => console.log(error))

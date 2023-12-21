@@ -23,7 +23,7 @@ const router = createBrowserRouter([
           {
             path:'View_Recipe/:id',
             element: <PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
-            loader:({params}) => fetch(`https://nice-pear-goldfish-cap.cyclic.app/chef/${params.id}`)
+            loader:({params}) => fetch(`https://food-recipe-server-ruby.vercel.app/chef/${params.id}`)
           },
           {
             path:'/blog',
